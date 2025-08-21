@@ -26,10 +26,10 @@ PyShield 是一个强大的 Python 项目编译工具，可以将 Python 源代�
 
 ```bash
 # 基本使用
-python generate_pyd.py ./your_project -o output_dir
+python pyshield.py ./your_project -o output_dir
 
 # 排除特定目录和文件
-python generate_pyd.py ./your_project -o output_dir --exclude-dir venv,tests --exclude-py config.py
+python pyshield.py ./your_project -o output_dir --exclude-dir venv,tests --exclude-py config.py
 ```
 
 ## 🔧 特性
