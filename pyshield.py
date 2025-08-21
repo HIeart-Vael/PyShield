@@ -142,7 +142,15 @@ def main():
 
     print("🔍 Finding Python modules and packages...")
     extensions, packages = find_extensions_and_packages(PROJECT_ROOT, exclude_dirs_set, exclude_py_set)
-    print(f"Found {len(extensions)} extensions and {len(packages)} packages.")
+    print(f"Found {len(extensions)} extensions and {len(packages)} packages.")、
+
+    print(f"📦 packages ({len(packages)}):")
+    for pkg in packages:
+        print(f"  🔹 {pkg}")
+
+    # print(f"🔧 extensions ({len(extensions)}):")
+    # for ext in extensions:
+    #     print(f"  🔹 {ext.name} -> {ext.sources[0]}")
 
     print("⚙️  Cythonizing extensions...")
     compiler_directives = {
@@ -192,3 +200,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
